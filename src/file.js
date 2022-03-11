@@ -1,7 +1,6 @@
-const FileCreator = function (name) {
-    name = {};
-    
-    return name;
+const FileCreator = function () {
+    const fileArray = [];
+    return fileArray;
 };
 
 export {FileCreator};

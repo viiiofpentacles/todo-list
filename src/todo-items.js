@@ -10,8 +10,8 @@ const TodoItemCreator = function (title, desc, dueDate, priority) {
   return todoItem;
 }
 
-const AddToFileObject = () => {
+const AddToFileArray = () => {
     FileCreator.name[TodoItemCreator.todoItem];
 }
 
-export { TodoItemCreator, AddToFileObject };
+export { TodoItemCreator, AddToFileArray };

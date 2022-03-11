@@ -21,4 +21,23 @@ body {
     padding: 2vh;
     border-radius: 12px;
     background-color: rgb(248, 240, 240);
+    color: rgb(124, 72, 72);
+}
+
+#todo-list {
+    display: flex;
+    flex-flow: column;
+}
+
+#todo-list button {
+    border: none;
+    border-radius: 6px;
+    width: 5rem;
+    padding: 0.3rem;
+    margin: 0.5rem;
+}
+
+#todo-list input {
+    display: block;
+    margin-bottom: 0.5rem;
 }

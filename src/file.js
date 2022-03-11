@@ -1,9 +1,7 @@
 const FileCreator = function (name) {
-    const file = {
-        name,
-    };
+    name = {};
     
-    return file;
+    return name;
 };
 
 export {FileCreator};

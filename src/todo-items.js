@@ -1,3 +1,5 @@
+import { FileCreator } from './file.js';
+
 const TodoItemCreator = function (title, desc, dueDate, priority) {
     const todoItem = {
       title,
@@ -8,4 +10,8 @@ const TodoItemCreator = function (title, desc, dueDate, priority) {
   return todoItem;
 }
 
-export { TodoItemCreator };
+const AddToFileObject = () => {
+    FileCreator.name[TodoItemCreator.todoItem];
+}
+
+export { TodoItemCreator, AddToFileObject };

@@ -1,21 +1,30 @@
-import { TodoItemCreator, AddToFileObject } from './todo-items.js'
+import { TodoItemCreator } from './todo-items.js'
 
 const NewItemForm = () => {
     const form = document.createElement('form');
+    form.hidden = true;
     form.id = 'new-todo-form';
     document.getElementById('todo-list').appendChild(form);
     FormInputs('Title', 'text');
     FormInputs('Description', 'text');
-    FormInputs('Due Date', 'date');
+    FormInputs('Due', 'date');
+    
     const prioritySelector = document.createElement('input');
       prioritySelector.setAttribute('type', 'checkbox');
       prioritySelector.setAttribute('value', 'yes');
       prioritySelector.id = 'priority';
+    
     const priorityLabel = document.createElement('label');
       priorityLabel.setAttribute('for', 'priority');
       priorityLabel.textContent = 'Prioritize?';
     form.appendChild(priorityLabel);
     form.appendChild(prioritySelector);
+
+    const fileName = document.createElement('input');
+    fileName.id = 'fileName';
+    fileName.setAttribute('type', 'hidden');
+    fileName.setAttribute('value', 'Notes'); 
+    
     const submitButton = document.createElement('input');
     submitButton.setAttribute('type', 'submit');
     submitButton.id = 'submit-button';
@@ -23,6 +32,9 @@ const NewItemForm = () => {
     form.appendChild(submitButton);
     submitButton.addEventListener('click', function(event) {
         event.preventDefault();
+        TodoItemCreator();
+        form.hidden= true;
+        form.reset();
     });
 }
 

@@ -1,17 +1,15 @@
-import { FileCreator } from './file.js';
+const fileArray = [];
 
-const TodoItemCreator = function (title, desc, dueDate, priority) {
+const TodoItemCreator = function () {
     const todoItem = {
-      title,
-      desc,
-      dueDate,
-      priority,
+      title: document.getElementById('Title').value,
+      desc: document.getElementById('Description').value,
+      due: document.getElementById('Due').value,
+      priority: 'high',
+      fileName: 'Notes'
     }
-  return todoItem;
+  fileArray.push(todoItem)
+  console.log (fileArray);
 }
 
-const AddToFileArray = () => {
-    FileCreator.name[TodoItemCreator.todoItem];
-}
-
-export { TodoItemCreator, AddToFileArray };
+export { fileArray, TodoItemCreator };

@@ -34,7 +34,7 @@ const NewItemForm = () => {
     submitButton.addEventListener('click', function(event) {
         event.preventDefault();
         TodoItemCreator();
-        form.hidden= true;
+        form.hidden = true;
         form.reset();
     });
 }

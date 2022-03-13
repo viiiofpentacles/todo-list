@@ -19,13 +19,19 @@ const NewFileButtonCreator = () => {
     document.getElementById('files-container').appendChild(newFileButton);
 }
 
+const formToggle = () => {
+    const form = document.getElementById('new-todo-form');
+    if (form.hidden === true) {
+        form.hidden = false;
+    } else {
+        form.hidden = true;
+    }
+}
+
 const NewToDoItemButtonCreator = () => {
     const newTodoItemButton = document.createElement('button');
     newTodoItemButton.textContent = 'Add';
-    newTodoItemButton.addEventListener('click', () => {
-        const form = document.getElementById('new-todo-form');
-        form.hidden = false;
-    });
+    newTodoItemButton.addEventListener('click', formToggle);
     return newTodoItemButton;
 }
 

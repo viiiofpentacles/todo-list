@@ -24,6 +24,7 @@ const NewItemForm = () => {
     fileName.id = 'fileName';
     fileName.setAttribute('type', 'hidden');
     fileName.setAttribute('value', 'Notes'); 
+    form.appendChild(fileName);
     
     const submitButton = document.createElement('input');
     submitButton.setAttribute('type', 'submit');

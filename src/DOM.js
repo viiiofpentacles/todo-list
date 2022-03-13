@@ -1,11 +1,10 @@
-
 const NewFile = (name) => {
     const fileDiv = document.createElement('div');
     fileDiv.id = name;  
     fileDiv.textContent = name;
-    const fileName = document.getElementById('fileName');
     fileDiv.addEventListener('click', () => {
-        fileName.setAttribute = ('value', name);
+        const fileName = document.getElementById('fileName');
+        fileName.value = name;
     });
     document.getElementById('files-container').appendChild(fileDiv);
 }

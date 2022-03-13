@@ -6,7 +6,7 @@ const TodoItemCreator = function () {
       desc: document.getElementById('Description').value,
       due: document.getElementById('Due').value,
       priority: 'high',
-      fileName: 'Notes'
+      fileName: document.getElementById('fileName').value
     }
   fileArray.push(todoItem)
   console.log (fileArray);

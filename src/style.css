@@ -41,3 +41,9 @@ body {
     display: block;
     margin-bottom: 0.5rem;
 }
+
+button:hover,
+#files-container div:hover,
+#todo-items-container div:hover {
+    cursor: pointer;
+}

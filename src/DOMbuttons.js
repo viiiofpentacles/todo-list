@@ -1,4 +1,6 @@
-import { NewFile } from './update-display.js'
+import { NewFile } from './update-display.js';
+import { deleteTodo } from './todo-items.js';
+import {displayFileItems } from './update-display.js'
 
 const NewFileButtonCreator = () => {
     const newFileButton = document.createElement('button');
@@ -26,4 +28,14 @@ const NewToDoItemButtonCreator = () => {
     return newTodoItemButton;
 }
 
-export { NewFileButtonCreator, NewToDoItemButtonCreator };
+const DeleteTodoButton = (todoItem, fileName) => {
+    const deleteButton = document.createElement('button');
+    deleteButton.textContent = "Delete";
+    deleteButton.addEventListener('click', () => {
+        deleteTodo(todoItem);
+        displayFileItems(fileName);
+    })
+    return deleteButton;
+}
+
+export { NewFileButtonCreator, NewToDoItemButtonCreator, DeleteTodoButton };

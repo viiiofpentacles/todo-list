@@ -1,5 +1,5 @@
 import './style.css';
-import { NewFileButtonCreator, NewToDoItemButtonCreator } from './DOM.js';
+import { NewFileButtonCreator, NewToDoItemButtonCreator } from './DOMbuttons';
 import { NewFile } from './update-display.js'
 import { NewItemForm } from './form.js';
 

@@ -12,4 +12,12 @@ const TodoItemCreator = function () {
     fileArray.push(todoItem);
 }
 
-export { fileArray, TodoItemCreator };
+const deleteTodo = function (todoTitle) {
+  for (let i = 0; i < fileArray.length; i++) {
+    if (fileArray[i].title === todoTitle) {
+      fileArray.splice(i, 1);
+    }
+  }
+}
+
+export { fileArray, TodoItemCreator, deleteTodo };

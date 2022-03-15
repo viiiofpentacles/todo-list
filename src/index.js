@@ -5,6 +5,6 @@ import { NewItemForm } from './form.js';
 
 NewFileButtonCreator();
 NewFile('Notes');
-const todoListContainer = document.getElementById('todo-list');
-todoListContainer.appendChild(NewToDoItemButtonCreator());
+const addButtonContainer = document.getElementById('add-button-container');
+addButtonContainer.appendChild(NewToDoItemButtonCreator());
 NewItemForm();

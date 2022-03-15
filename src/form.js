@@ -1,10 +1,11 @@
-import { TodoItemCreator, displayNewItem } from './todo-items.js';
+import { TodoItemCreator } from './todo-items.js';
+import { displayNewItem } from './update-display.js';
 
 const NewItemForm = () => {
     const form = document.createElement('form');
     form.hidden = true;
     form.id = 'new-todo-form';
-    document.getElementById('todo-list').appendChild(form);
+    document.getElementById('add-button-container').appendChild(form);
     FormInputs('Title', 'text');
     FormInputs('Description', 'text');
     FormInputs('Due', 'date');

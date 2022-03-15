@@ -1,4 +1,4 @@
-import { TodoItemCreator } from './todo-items.js'
+import { TodoItemCreator, displayNewItem } from './todo-items.js';
 
 const NewItemForm = () => {
     const form = document.createElement('form');
@@ -34,6 +34,7 @@ const NewItemForm = () => {
     submitButton.addEventListener('click', function(event) {
         event.preventDefault();
         TodoItemCreator();
+        displayNewItem();
         form.hidden = true;
         form.reset();
     });

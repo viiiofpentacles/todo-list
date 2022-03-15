@@ -8,8 +8,19 @@ const TodoItemCreator = function () {
       priority: 'high',
       fileName: document.getElementById('fileName').value
     }
-  fileArray.push(todoItem)
-  console.log (fileArray);
+
+    fileArray.push(todoItem);
 }
 
-export { fileArray, TodoItemCreator };
+const displayNewItem = () => {
+  const newItemDiv = document.createElement('div');
+  newItemDiv.textContent = fileArray[fileArray.length-1].title;
+  const dueDateDiv = document.createElement('p');
+  dueDateDiv.textContent = `Due: ${fileArray[fileArray.length - 1].due}`;
+  newItemDiv.appendChild(dueDateDiv);
+  document.getElementById('todo-list').appendChild(newItemDiv);
+}
+
+
+
+export { TodoItemCreator, displayNewItem };

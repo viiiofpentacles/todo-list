@@ -1,13 +1,4 @@
-const NewFile = (name) => {
-    const fileDiv = document.createElement('div');
-    fileDiv.id = name;  
-    fileDiv.textContent = name;
-    fileDiv.addEventListener('click', () => {
-        const fileName = document.getElementById('fileName');
-        fileName.value = name;
-    });
-    document.getElementById('files-container').appendChild(fileDiv);
-}
+import { NewFile } from './update-display.js'
 
 const NewFileButtonCreator = () => {
     const newFileButton = document.createElement('button');
@@ -35,4 +26,4 @@ const NewToDoItemButtonCreator = () => {
     return newTodoItemButton;
 }
 
-export { NewFile, NewFileButtonCreator, NewToDoItemButtonCreator };
+export { NewFileButtonCreator, NewToDoItemButtonCreator };

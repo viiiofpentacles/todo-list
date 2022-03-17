@@ -34,6 +34,10 @@ const DeleteTodoButton = (todoItem, fileName) => {
     deleteButton.addEventListener('click', () => {
         deleteTodo(todoItem);
         displayFileItems(fileName);
+        const todoItemContainer = document.getElementById('todo-item');
+        if (todoItemContainer.length) {
+            todoItemContainer.removeChild(todoItemContainer.firstChild);
+        }
     })
     return deleteButton;
 }

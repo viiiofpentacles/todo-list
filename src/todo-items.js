@@ -5,7 +5,7 @@ const TodoItemCreator = function () {
       title: document.getElementById('Title').value,
       desc: document.getElementById('Description').value,
       due: document.getElementById('Due').value,
-      priority: 'high',
+      priority: (document.getElementById('priority').checked)? 'high': 'low',
       fileName: document.getElementById('fileName').value
     }
 

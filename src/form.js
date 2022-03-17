@@ -12,7 +12,6 @@ const NewItemForm = () => {
     
     const prioritySelector = document.createElement('input');
       prioritySelector.setAttribute('type', 'checkbox');
-      prioritySelector.setAttribute('value', 'yes');
       prioritySelector.id = 'priority';
     
     const priorityLabel = document.createElement('label');

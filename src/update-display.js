@@ -17,6 +17,10 @@ const NewFile = (name) => {
 
 const displayNewItem = () => {
   const newItemDiv = document.createElement('div');
+  if (fileArray[fileArray.length-1].priority === 'high') {
+      newItemDiv.style.fontWeight = 'bold';
+      newItemDiv.style.color = '#b20000';
+  }
   newItemDiv.textContent = fileArray[fileArray.length-1].title;
   const dueDateDiv = document.createElement('p');
   dueDateDiv.textContent = `Due: ${fileArray[fileArray.length-1].due}`;
@@ -41,6 +45,10 @@ const displayFileItems = (currentFileName) => {
     for (let i = 0; i < fileArray.length; i++) {
         if (fileArray[i].fileName === currentFileName) {
             const itemDiv = document.createElement('div');
+            if (fileArray[i].priority === 'high') {
+                itemDiv.style.fontWeight = 'bold';
+                itemDiv.style.color = '#b20000';
+            }
             itemDiv.textContent = fileArray[i].title;
             const dueDateDiv = document.createElement('p');
             dueDateDiv.textContent = `Due: ${fileArray[i].due}`;
@@ -70,6 +78,10 @@ const displayItemDetails = (itemTitle) => {
             const displayDue = document.createElement('p');
             displayDue.textContent = `Due: ${fileArray[i].due}`;
             const displayPriority = document.createElement('p');
+            if (fileArray[i].priority === 'high') {
+                displayPriority.style.fontWeight = 'bold';
+                displayPriority.style.color = '#b20000';
+            }
             displayPriority.textContent = `Priority: ${fileArray[i].priority}`;
             itemDetailsDiv.appendChild(displayTitle);
             itemDetailsDiv.appendChild(displayDesc);

@@ -17,7 +17,7 @@ NewFileButtonCreator();
 const displayStorageFiles = (() => {
     const listOfFiles = [];
     for (let i = 0; i < fileArray.length; i++) {
-        if (!listOfFiles.includes(fileArray[i].fileName)) {
+        if ((!listOfFiles.includes(fileArray[i].fileName)) && fileArray[i].fileName != 'Notes') {
         listOfFiles.push(fileArray[i].fileName);
         };
     };

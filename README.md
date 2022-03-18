@@ -8,4 +8,6 @@ A basic todo-list project. Users can:
 ## WIP:
 - More CSS styling  
 - Displaying items based on priority  
-- Ability to mark item as complete
+- Ability to mark item as complete  
+
+Live preview [here](https://viiiofpentacles.github.io/todo-list/).

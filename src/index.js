@@ -26,6 +26,7 @@ const displayStorageFiles = (() => {
     }
 })();
 
+NewFile('Notes');
 displayFileItems('Notes');
 const addButtonContainer = document.getElementById('add-button-container');
 addButtonContainer.appendChild(NewToDoItemButtonCreator());
